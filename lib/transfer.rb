@@ -47,6 +47,8 @@ attr_accessor :sender, :receiver, :status, :amount
       receiver.balance -= amount
       sender.balance += amount
       self.status = "reversed"
+    else
+      reject_transfer
     end
   end
 
